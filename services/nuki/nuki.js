@@ -44,7 +44,7 @@ async function startup() {
 
     let response = await getRequest('https://api.nuki.io/discover/bridges')
 	bridges = response.bridges
-	//removeCallback(bridges[0].ip)
+	removeCallback(bridges[0].ip)
     for (const bridge of response.bridges) {
         mqtt.sendMessage("system/bridge/" + bridge.bridgeId + "/discover", JSON.stringify(bridge))
     }

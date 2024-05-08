@@ -8,7 +8,6 @@ var router = express.Router();
 router.post('/', (req, res) => {
 
 	callback = req.body
-	console.log(callback.batteryCritical)
 	if (callback.batteryCritical) {
 		req.body.batteryCritical = 1
 	} else {

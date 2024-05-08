@@ -9,5 +9,6 @@ RUN usermod -u 99 node
 USER node
 RUN npm install
 COPY --chown=node:node . .
+EXPOSE 3100
 VOLUME /home/node/app/log
 CMD [ "node", "server.js" ]

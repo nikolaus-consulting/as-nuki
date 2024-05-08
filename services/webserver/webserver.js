@@ -1,6 +1,9 @@
 // Logging
 const {systemLogger, accessLogger} = require('../../utils/logger')
 
+// Configuration
+const config = require('../../config');
+
 // Webserver
 const express = require('express');
 const app = express();
@@ -11,11 +14,11 @@ const https = require('https');
 const bodyParser = require('body-parser');
 
 // Global Variable
-const wsport = 3100
+const wsport = config.webserver.port || 3100
 
 // Start Webserver
 server.listen( wsport, () => {
-    systemLogger.info('App running at ' + wsport)
+    systemLogger.info('Webserver - Running at port ' + wsport)
 })
 
 // Body Parser

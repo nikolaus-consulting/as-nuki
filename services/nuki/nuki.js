@@ -91,7 +91,7 @@ async function startup() {
         for (const device of response) {
             mqtt.sendMessage(device.nukiId + "/info", JSON.stringify(device))
         }
-        //addCallback(bridge.ip)
+        addCallback(bridge.ip)
     }
    
     for (const bridge of response.bridges) {

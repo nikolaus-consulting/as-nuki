@@ -6,4 +6,6 @@ echo "#############################################"
 echo "Update $PROJECT"
 read -p "Input Description: " DESCRIPTION
 echo "$NOW $DESCRIPTION"
-git add . && git commit -m "$NOW $DESCRIPTION" && git push
+git add .
+git commit -m "$NOW $DESCRIPTION"
+git push

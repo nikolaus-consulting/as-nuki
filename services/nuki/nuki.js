@@ -2,7 +2,7 @@
 const {systemLogger, accessLogger, deviceLogger} = require('../../utils/logger')
 
 // Configuration
-const config = require('../../config');
+var config = global.config
 
 // Utils
 const utils = require('../../utils/utils')

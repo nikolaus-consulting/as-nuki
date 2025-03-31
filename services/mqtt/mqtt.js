@@ -15,7 +15,7 @@ const {systemLogger, deviceLogger} = require('../../utils/logger')
 let MQTT = require("mqtt");
 
 // Configuration
-var config = require('../../config');
+var config = global.config
 
 const mqttBaseTopic = config.NAME
 

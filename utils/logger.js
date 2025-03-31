@@ -15,7 +15,7 @@ const { combine, splat, timestamp, label, printf } = format;
 require('winston-daily-rotate-file');
 
 // Configuration
-const config = require('../config');
+var config = global.config
 
 const logDir = config.logging.directory;
 

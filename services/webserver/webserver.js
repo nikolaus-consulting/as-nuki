@@ -2,7 +2,7 @@
 const {systemLogger, accessLogger} = require('../../utils/logger')
 
 // Configuration
-const config = require('../../config');
+var config = global.config
 
 // Webserver
 const express = require('express');

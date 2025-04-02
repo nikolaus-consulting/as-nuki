@@ -1,4 +1,4 @@
-FROM node:20
+FROM node:lts-slim
 RUN mkdir -p /home/node/app
 RUN mkdir -p /home/node/app/log
 RUN mkdir -p /home/node/app/config
